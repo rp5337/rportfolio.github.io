@@ -1,1 +1,116 @@
-# rportfolio.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rishi Panchal | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #E0D9D2;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #D96846;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #D96846;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #D96846;
+      color: white;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #b94e30;
+      transform: scale(1.05);
+    }
+
+    #project-box {
+      display: none;
+      transition: all 0.3s ease;
+      background: #fff;
+      color: #333;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #email-display, #phone-display {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #D96846;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👋 I'm Rishi Panchal</h1>
+
+  <!-- Profile Image -->
+  <img src="file:///D:/Rishi%20ALL%20Document/6.png" alt="Rishi Panchal Profile Photo">
+
+  <p>🚗 Innovator | 🧠 Tech Enthusiast | 💡 Problem Solver</p>
+
+  <!-- Toggle View Project Button -->
+  <button class="btn" onclick="toggleProject()">📂 View Project</button>
+
+  <!-- Project Box -->
+  <div id="project-box">
+    <h2>Car Sleeping Detector</h2>
+    <p>This system detects when a driver is falling asleep and alerts them to prevent accidents.</p>
+  </div>
+
+  <!-- Contact Buttons -->
+  <h3>📬 Contact Me</h3>
+  <button class="btn" onclick="showPhone()">📞 Call Me</button>
+  <button class="btn" onclick="showEmail()">📧 Email Me</button>
+  <div id="phone-display"></div>
+  <div id="email-display"></div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleProject() {
+      const box = document.getElementById("project-box");
+      box.style.display = (box.style.display === "block") ? "none" : "block";
+    }
+
+    function showEmail() {
+      document.getElementById("email-display").innerText = "📨 rp5337282@gmail.com";
+    }
+
+    function showPhone() {
+      document.getElementById("phone-display").innerText = "📱 9265337282";
+    }
+  </script>
+
+</body>
+</html>
